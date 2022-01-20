@@ -1,62 +1,126 @@
 html, body, .container {
     height: 100%;
-    font-size: 16px;
+    margin-top: 20px;
 }
 
-.container {
+.logo {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.logo img {
-    margin-inline: auto auto;
-    margin-block: 3rem 3rem;
-}
 
-/***************  HEADER ************** */
-
-.header {
+.hero-header {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+
+.main-title {
+    
     text-align: center;
 }
 
-.header__content {
-    width: 100vw;
+
+.title{
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.title-blue {
+    color: rgb(6, 170, 192);
+}
+
+.p-title {
+    margin-top: 20px;
+    color: rgb(150, 150, 148);
+}
+
+.button-1 {
+    padding: 15px 25px;
+    margin: 20px 10px;
+    border-radius: 30px;
+    background: rgb(6, 170, 192);
+    color: honeydew;
+}
+.button-2 {
+    padding: 15px 25px;
+    margin: 20px 10px;
+    border-radius: 30px;
+    background: rgb(190, 65, 163);
+    color: honeydew;
+}
+
+span{
+    color: rgb(132, 108, 238);
+}
+
+
+.spacer-1 {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
 }
 
-
-.header__banner--a,
-.header__banner--b {
-    width: 100%;
+.text-circle {
+   position: absolute;
+   top: 184px;
+   font-size: 20px;
+   color: lightgray;
 }
 
-.header__banner--b {
+.main-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-images .card  {
+    margin-top: 40px;
     
+    height: 300px;
+    width: 300px; 
 }
 
-.banner {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+.second-header {
+ margin-top: 60px;
+ margin-bottom: 40px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ flex-wrap: wrap;
+}
+
+.spacer-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   margin-bottom: -53px;
+}
+
+.footer {
+    background-image: url(assets/desktop/image-footer.jpg);
     background-repeat: no-repeat;
+     background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(6, 170, 192, 0.7);
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    min-width: fit-content;
 }
 
-.header__image--a {
-    background-image: url(assets/desktop/image-hero-left.png);
-}
 
-.header__image--b {
-    display: none;
-}
-
-.header__image--c {
-    background-image: url(assets/desktop/image-hero-right.png);
-}
 
 
 @media screen and (max-width: 768px) {
@@ -82,74 +146,4 @@ html, body, .container {
     .footer {
         background-image: url(assets/mobile/image-footer.jpg);
     }
-}
-
-.header__title {
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 600;
-    color: var(--header-font-color);
-}
-
-.header__cta {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-/***************  BUTTON ************** */
-
-button.button__primary, button.button__secondary {
-    color: white;
-    font-size: 1rem;
-    border-radius: 2rem;
-    padding-block: .6rem;
-    font-weight: 600;
-    /* TODO: fix width */
-    min-width: 193px; 
-    height: 58px;
-    letter-spacing: 1.5px;
-}
-
-button.button__primary {
-    background: var(--primary-color);
-}
-
-button.button__secondary {
-    background: var(--secondary-color);
-}
-
-.button___version-text {
-    margin-left: .2rem;
-}
-
-button.button__primary > .version-text {
-    color: var(--primary-color-2);
-}
-
-button.button__secondary > .version-text {
-    color: var(--secondary-color-2);
-}
-
-/* .spacer {
-    background-image: url(assets/spacer.svg);
-    background-repeat: no-repeat;
-} */
-
-
-/***************  MAIN ***************/
-
-.main__image-container {
-    height: 25vh;
-}
-
-.main__image-container > img {
-    aspect-ratio: 1;
-}
-
-
-/***************  FOOTER ***************/
-
-.footer {
-    background-image: url(assets/desktop/image-footer.jpg);
 }
